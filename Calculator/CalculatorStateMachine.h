@@ -11,11 +11,21 @@
 @class CalculatorViewController;
 
 @interface CalculatorStateMachine : NSObject
+{
+    double buff;
+    int k;
+}
 
 @property enum {Integer, Decimal} num;
 @property enum {Null, Plus, Minus, Multi, Divide} calc;
+@property double x,buff;
+@property int k;
 
--(void)clearState:sender controller:(CalculatorViewController*)controller;
--(void)Dot:(id)sender controller:(CalculatorViewController*)controller;
+-(void)clearState;
+-(void)setDecimal;
+-(double)calcButton:(int)n;
+-(double)clearValue;
+-(double)calcX:(double)cx;
+-(void)calcBuff:(double)cx;
 
 @end

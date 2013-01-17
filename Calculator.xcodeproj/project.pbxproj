@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2DBA872B16671D89008C0CB3 /* CalculatorStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA872A16671D89008C0CB3 /* CalculatorStateMachine.m */; };
+		2DCF933A169E8E770023E0B7 /* CalculatorViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF9339169E8E770023E0B7 /* CalculatorViewControllerTests.m */; };
+		2DCF933D169E8E910023E0B7 /* CalculatorStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF933C169E8E910023E0B7 /* CalculatorStateMachineTests.m */; };
 		2DEB5478163666EA00FD1790 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEB5477163666EA00FD1790 /* UIKit.framework */; };
 		2DEB547A163666EA00FD1790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEB5479163666EA00FD1790 /* Foundation.framework */; };
 		2DEB547C163666EA00FD1790 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEB547B163666EA00FD1790 /* CoreGraphics.framework */; };
@@ -40,6 +42,10 @@
 /* Begin PBXFileReference section */
 		2DBA872916671D89008C0CB3 /* CalculatorStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorStateMachine.h; sourceTree = "<group>"; };
 		2DBA872A16671D89008C0CB3 /* CalculatorStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorStateMachine.m; sourceTree = "<group>"; };
+		2DCF9338169E8E770023E0B7 /* CalculatorViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewControllerTests.h; sourceTree = "<group>"; };
+		2DCF9339169E8E770023E0B7 /* CalculatorViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewControllerTests.m; sourceTree = "<group>"; };
+		2DCF933B169E8E910023E0B7 /* CalculatorStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorStateMachineTests.h; sourceTree = "<group>"; };
+		2DCF933C169E8E910023E0B7 /* CalculatorStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorStateMachineTests.m; sourceTree = "<group>"; };
 		2DEB5473163666EA00FD1790 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEB5477163666EA00FD1790 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DEB5479163666EA00FD1790 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,6 +161,10 @@
 				2DEB54AA163666EA00FD1790 /* CalculatorTests.h */,
 				2DEB54AB163666EA00FD1790 /* CalculatorTests.m */,
 				2DEB54A5163666EA00FD1790 /* Supporting Files */,
+				2DCF9338169E8E770023E0B7 /* CalculatorViewControllerTests.h */,
+				2DCF9339169E8E770023E0B7 /* CalculatorViewControllerTests.m */,
+				2DCF933B169E8E910023E0B7 /* CalculatorStateMachineTests.h */,
+				2DCF933C169E8E910023E0B7 /* CalculatorStateMachineTests.m */,
 			);
 			path = CalculatorTests;
 			sourceTree = "<group>";
@@ -292,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DEB54AC163666EA00FD1790 /* CalculatorTests.m in Sources */,
+				2DCF933A169E8E770023E0B7 /* CalculatorViewControllerTests.m in Sources */,
+				2DCF933D169E8E910023E0B7 /* CalculatorStateMachineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

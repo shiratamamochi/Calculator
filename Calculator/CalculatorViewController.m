@@ -23,8 +23,9 @@
     [model setNum:Integer];
     [model setCalc:Null];
 	// Do any additional setup after loading the view, typically from a nib.
-    x=0.0;
-    buff=0.0;
+    
+    [model setX: 0.0];
+    [model setBuff:0.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,26 +35,17 @@
 }
 
 - (void)setNumber {
-    if (x<pow(10, 15) && x>pow(10, -6)) {
-        [[self Result] setText:[NSString stringWithFormat:@"%f", x]];
+    if (cx<pow(10, 15) && cx>pow(10, -6)) {
+        [[self Result] setText:[NSString stringWithFormat:@"%f", cx]];
     }
     else{
-        [[self Result] setText:[NSString stringWithFormat:@"%e", x]];
+        [[self Result] setText:[NSString stringWithFormat:@"%e", cx]];
     }
 }
 
 //buttonN_method
 - (void)buttonN {
-    switch ([model num]) {
-        case Integer:
-            x=10*x+n;
-            break;
-            
-        case Decimal:
-            x=x+n*pow(10, -k);
-            k++;
-            break;
-    }
+    cx=[model calcButton:n];
     [self setNumber];
 }
 
@@ -108,77 +100,30 @@
 }
 
 - (void)clearNumber {
-    x=0.0;
-    buff=0.0;
+    cx=[model clearValue];
     [self setNumber];
 }
 
 - (IBAction)Clear:(id)sender {
-    [model clearState:sender controller:self];
+    [model clearState];
     [self clearNumber];
 }
 
 - (IBAction)Dot:(id)sender {
-    [model Dot:sender controller:self];
-    if ([model num] == Integer) {
-        k=1;
-    }
+    [model setDecimal];
 }
 
 - (IBAction)Equal:(id)sender {
-    switch ([model calc]) {
-        case Null:
-            break;
-            
-        case Plus:
-            x=buff+x;
-            break;
-            
-        case Minus:
-            x=buff-x;
-            break;
-            
-        case Multi:
-            x=buff*x;
-            break;
-            
-        case Divide:
-            x=buff/x;
-            break;
-    }
+    cx=[model calcX:cx];
     [self setNumber];
 
     [model setNum:Integer];
 }
 
 - (void)buffCalc {
-    if (x!=0) {
-        switch ([model calc]) {
-            case Null:
-                buff=x;
-                break;
-                
-            case Plus:
-                buff=buff+x;
-                break;
-                
-            case Minus:
-                buff=buff-x;
-                break;
-                
-            case Multi:
-                buff=buff*x;
-                break;
-                
-            case Divide:
-                buff=buff/x;
-                break;
-        }
-    }
-    
+    [model calcBuff:cx];
     [self setNumber];
-    
-    x=0.0;
+    cx=0;
 }
 
 - (IBAction)Plus:(id)sender {

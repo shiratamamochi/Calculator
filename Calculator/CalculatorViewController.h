@@ -10,9 +10,7 @@
 #import "CalculatorStateMachine.h"
 
 @interface CalculatorViewController : UIViewController {
-    double x;       //Inputed number
-    double buff;    //buffer
-    int k;          //The number of pushing after push dot
+    double cx;       //Inputed number
     int n;
 }
 @property (weak, nonatomic) IBOutlet UILabel *Result;
